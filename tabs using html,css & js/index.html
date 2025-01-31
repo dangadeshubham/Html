@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="tabs">
+        <div class="tab" data-tab-target="#tab1">
+          <p>Tab1</p>
+        </div>
+        <div class="tab" data-tab-target="#tab2">
+          <p>Tab 2</p>
+        </div>
+        <div class="tab" data-tab-target="#tab3">
+          <p>Tab 3</p>
+        </div>
+      </div>
+
+      <div class="content">
+        <div id="tab1" data-tab-content class="items active">
+          <h2>Tab 1</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+            autem voluptate cum dolorem qui sed voluptates expedita tempore,
+            molestias soluta.
+          </p>
+        </div>
+        <div id="tab2" data-tab-content class="items">
+            <h2>Tab 2</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            </p>
+        </div>
+        <div id="tab3" data-tab-content class="items">
+            <h2>Tab 3</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+              autem voluptate cum dolorem qui sed 
+            </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const tabs = document.querySelectorAll("[data-tab-target]");
+      const tabcon = document.querySelectorAll("[data-tab-content]");
+
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          const target = document.querySelector(tab.dataset.tabTarget);
+          tabcon.forEach((tabc_all) => {
+            tabc_all.classList.remove("active");
+          });
+            target.classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card">
+        <div class="btn">
+            <div class="text">
+                <p>Select Theme</p>
+            </div>
+            <input type="checkbox" name="" id="">
+            <div class="colors">
+                <div class="color" style="--i:1"></div>
+                <div class="color" style="--i:2"></div>
+                <div class="color" style="--i:3"></div>
+                <div class="color" style="--i:4"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const card = document.querySelector('.card');
+        const color = document.querySelectorAll('.color');
+        const input = document.querySelector('input');
+
+        color.forEach(e => {
+            e.addEventListener('click', e => {
+                card.style.background = window.getComputedStyle(e.target).getPropertyValue("background");
+                input.checked = false;
+            });
+        });
+    </script>
+</body>
+</html>

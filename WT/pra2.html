@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe List</title>
+    <style>
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+
+        .Recipe-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .recipe {
+            border: 5px solid #ddd;
+            border-radius: 5px;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        .recipe:hover {
+            opacity: 1;
+        }
+
+        .recipe img {
+            width: 100%;
+            height: 150px;
+            opacity: 0.5;
+        }
+
+        .recipe img:hover {
+            opacity: 1;
+        }
+
+        .recipe h3 {
+            color: rgb(21, 24, 23);
+            font-size: 20px;
+            margin: 10px 0;
+        }
+
+        .recipe p {
+            color: black;
+            font-size: 14px;
+            padding: 0 10px;
+        }
+
+        .recipe a {
+            text-decoration: none;
+            color: #fff;
+            background-color: rgb(32, 22, 15);
+            padding: 10px 20px;
+            display: inline-block;
+            margin: 10px auto;
+        }
+
+        .recipe a:hover {
+            background-color: rgb(96, 48, 48);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Recipe List</h2>
+
+        <div class="Recipe-list">
+            <div class="recipe">
+                <img src="C:\Users\hp\Downloads\download.jpg" alt="recipe">
+                <h3>Recipe 1</h3>
+                <p>Recipe details</p>
+                <a href="#recipe">View Recipe</a>
+            </div>
+            <div class="recipe">
+                <img src="C:\Users\hp\Downloads\download.jpg" alt="recipe">
+                <h3>Recipe 2</h3>
+                <p>Recipe details</p>
+                <a href="#recipe">View Recipe</a>
+            </div>
+            <div class="recipe">
+                <img src="C:\Users\hp\Downloads\download.jpg" alt="recipe">
+                <h3>Recipe 3</h3>
+                <p>Recipe details</p>
+                <a href="#recipe">View Recipe</a>
+            </div>
+            <div class="recipe">
+                <img src="C:\Users\hp\Downloads\download.jpg" alt="recipe">
+                <h3>Recipe 4</h3>
+                <p>Recipe details</p>
+                <a href="#recipe">View Recipe</a>
+            </div>
+            <div class="recipe">
+                <img src="C:\Users\hp\Downloads\download.jpg" alt="recipe">
+                <h3>Recipe 5</h3>
+                <p>Recipe details</p>
+                <a href="#recipe">View Recipe</a>
+            </div>
+         
+        </div>
+    </div>
+</body>
+
+</html>
